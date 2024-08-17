@@ -1,0 +1,656 @@
+@font-face{
+    font-family: NBInternationalProBoo;
+    src: url(./assets/NBInternationalProBoo.ttf);
+}
+
+@font-face{
+    font-family: Rejouice-Headline;
+    src: url(./assets/Rejouice-Headline.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: NBInternationalProBoo;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+
+
+ /* ////////////////////// Loader CSS ///////////////////////// */
+
+ 
+ .loader{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top:0;
+    background-color:#000;
+    z-index:99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    gap: 10px;
+  }
+
+  .loader h3{
+    font-size: 2vw;
+    font-weight: 100;
+  }
+
+ /* ///////////////////////////// Page1 CSS ////////////////////////// */
+  
+ nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vw;
+}
+
+nav h3{
+    font-size: 1.8vw;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+.page1-content nav h3 span{
+    display: inline-block;
+}
+
+.page1 h1 span{
+    font-family: Rejouice-Headline;
+    font-size: 18vw;
+    font-weight: 100;
+    text-transform: uppercase;
+    line-height: 20vw;
+    display: inline-block;
+}
+
+.page1{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.page1 video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    animation-delay: 5s;
+}
+
+.page1-content{
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(0,0,0,.1);
+}
+
+/* /////////////////////////////// Page2 CSS //////////////////////////// */
+
+.cursor2{
+    height: 5vw;
+    width: 5vw;
+    background-color: #000;
+    position: absolute;
+    opacity: 0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2vw;
+    font-weight: 100;
+    border-radius: 50%;
+}
+
+.page2{
+    width: 100%;
+    position: relative;
+    padding: 10vw 3vw 0vw 3vw;
+}
+
+.page2-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1.2vw;
+    margin-bottom: 1vw;
+    border-bottom: 1px solid #00000092;
+}
+
+.page2-top h3{
+    font-size: 1.7vw;
+    font-weight: 500;
+}
+
+.page2 .element{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: 4vw 0;
+    gap: 4vw;
+}
+
+.page2 .element video{
+    width: 55%;
+    cursor: pointer;
+}
+
+.page2 .element h1{
+    font-size: 4.5vw;
+    font-weight: 400;
+}
+
+.page2 .element p{
+    margin-top: 4vw;
+    font-size: 1.4vw;
+    word-spacing: 1.5px;
+    font-weight: 400;
+}
+
+
+
+.page3{
+    /* min-height: 100vh; */
+    width: 100%;
+    position: relative;
+    padding: 8vw 3vw 0vw 3vw;
+    text-align: center;
+}
+
+
+.page3-top h2{
+    font-size: 4.5vw;
+    font-weight: 400;
+    display: inline-block;
+}
+
+.page3-top h2:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    top: 110%;
+    position: absolute;
+    background: #000;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  .page3:hover .page3-top h2:after { 
+    width: 100%; 
+    left: 0; 
+  }
+
+.page3-elements{
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 7vw;
+}
+
+.page3-elements .box{
+    height: 100%;
+    width: 32.5%;
+    position: relative;
+    cursor: pointer;
+}
+
+.page3-elements .box .explore{
+    position: absolute;
+    opacity: 0;
+    transform: translate(-50%,-50%);
+    top: 80%;
+    left: 50%;
+    font-size: 2vw;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-family: Rejouice-Headline;
+}
+
+.page3-elements .box video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.page3-elements .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    transition: all ease .7s;
+}
+.page3-elements .box:hover img{
+opacity: 0;
+}
+
+.page3-elements .box:hover .explore{
+opacity: 1;
+}
+
+/* ////////////////////// Page4 CSS //////////////////////////// */
+
+.page4{
+    /* min-height: 100vh; */
+    width: 100%;
+    position: relative;
+    padding: 10vw 0vw 0vw 0vw;
+    text-align: center;
+}
+
+
+.page4-top h2{
+    font-size: 4.5vw;
+    font-weight: 400;
+    display: inline-block;
+}
+
+.page4-top h2:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    top: 110%;
+    position: absolute;
+    background: #000;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  .page4:hover .page4-top h2:after { 
+    width: 100%; 
+    left: 0; 
+  }
+
+.page4-elements{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 3vw 0;
+    margin-top: 8vw;
+    background-color: #000;
+}
+
+
+.page4-elements .page4-right{
+    width: 100%;
+    height: 100vh;
+    padding: 3vw;
+}
+
+.page4-elements .page4-left{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page4-elements .page4-left video{
+    height: 100%;
+    opacity: 0.5;
+}
+
+.circle{
+    border-top: 2.5px;
+    border-right: 4px;
+    border-bottom: 2.5px;
+    border-left: .1px;
+    border-style: solid;
+    border-color: white;
+    border-radius:50%;
+    width:25vw;
+    height:25vw;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .spot{
+    height: 17px;
+    width: 17px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 0%;
+    left: 50%;
+  }
+
+  .page4-elements .page4-left .text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    color: #fff;
+  }
+
+  .page4-elements .page4-left .text .customers{
+    font-size: 1.6vw;
+    font-weight: 100;
+  } 
+
+  .page4-elements .page4-left .text .k100{
+    font-size: 3.3vw;
+    font-weight: 100;
+  } 
+
+
+  .page4-elements .page4-right .swiper {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+  .swiper-wrapper{
+    align-items: center;
+  }
+
+  .page4-elements .page4-right .swiper-slide {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    color: #fff;
+    padding: 2vw;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0 1px 9px rgba(255, 255, 255, 0.2);
+    transition: all .2s ease-in-out;
+    text-align: left;
+  }
+
+  .page4-elements .page4-right .swiper-slide:hover{
+    transform: scale(1.1);
+    transition-timing-function: ease-in;
+    transition: 0.2s;
+  }
+
+  .page4-elements .page4-right .swiper-slide img{
+    height: 6vw;
+    width: 6vw;
+    border-radius: 50%;
+  }
+  .page4-elements .page4-right .swiper-slide .review .name{
+    font-size: 1.5vw;
+    padding-left: 2vw;
+  }
+  .page4-elements .page4-right .swiper-slide .review p{
+    font-weight: 100;
+    font-size: 1vw;
+    padding: .5vw 2vw;
+  }
+
+  /* /////////////////////////////// Page5 CSS ////////////////////////////// */
+
+
+.page5{
+    width: 100%;
+    padding: 2.5vw;
+    position: relative;
+    text-align: center;
+    padding: 10vw 0 0 0;
+}
+
+.page5 .page5-top h1{
+    font-size: 6vw;
+    font-weight: 100;
+    display: inline-block;
+}
+
+.page5-top h1:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    top: 110%;
+    position: absolute;
+    background: #000;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  .page5:hover .page5-top h1:after { 
+    width: 100%; 
+    left: 0; 
+  }
+
+
+.page5-top .swiperDiv{
+    height: 60vh;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    margin-top: 8vw;
+}
+
+
+ /* ////////////////////////////// Footer ///////////////////////////// */
+
+.footer{
+    width: 100%;
+    margin-top: 1vw;
+    padding: 3vw;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+   padding: 4vw ;
+}
+
+.content h5{
+    font-size: 1.5vw;
+    font-weight: 500;
+    font-family: NBInternationalProBoo;
+    text-align: start;
+    padding-bottom: 1vw;
+}
+
+
+.footer h1 span{
+    font-family: Rejouice-Headline;
+    font-size: 17vw;
+    font-weight: 100;
+    text-transform: uppercase;
+    line-height: 15vw;
+    display: inline-block;
+}
+
+.footer .content h5:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* ///////////////////////// Swiper CSS ////////////////////////////// */
+ 
+.page5 .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .page5 .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+  }
+
+  .page5 .swiper-slide img {
+    display: block;
+    width: 19%;
+    object-fit: cover;
+  } 
+
+
+  /* ///////////////////////// Swiper CSS End ////////////////////////////// */
+
+
+  
+
+  @media (max-width:600px){
+
+    .page1{
+        height: 80vh;
+    }
+
+    .page1 .page1-content nav{
+        padding: 8vw;
+    }
+
+    .page1 h3{
+        font-size: 4.5vw;
+        font-weight: 900;
+    }
+
+
+    .page2 .element{
+        flex-direction: column;
+        align-items: center;
+        padding: 3vw;
+    }
+
+    .page2 .element h1{
+        transform: none;
+        font-size: 6vw;
+        text-align: center;
+    }
+
+    .page2 .element p{
+        /* transform: none; */
+        font-size: 2.5vw;
+    }
+
+    .page2 .element video{
+        width: 100%;
+    }
+
+    .page3{
+      min-height: 100vh;
+    }
+    
+    .page3 .page3-top h2{
+        /* transform: none !important; */
+        font-size: 6vw;
+    }
+    .page3-elements{
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .page3-elements .box{
+        width: 80vw;
+        height: 60vh;
+    }
+
+    .page4-elements{
+        flex-direction: column;
+    }
+   
+    .page4-top h2{
+        font-size: 6vw;
+    }
+
+    .page4-elements .page4-left{
+        height: 50vh;
+    }
+
+    .page4-elements .page4-right{
+        height: 70vh;
+    }
+
+    .circle {
+        display: none;
+    }
+    .spot{
+        display: none;
+    }
+
+    .page4-elements .page4-left .text .k100{
+        font-size: 6vw;
+    }
+    .page4-elements .page4-left .text .customers{
+        font-size: 3vw;
+    }
+
+    .page4 .swiper-vertical>.swiper-wrapper{
+        align-items: center;
+    }
+    .page4-elements .page4-right .swiper-slide{
+        justify-content: flex-start;
+    }
+
+    .page4 .page4-right .swiper-slide img{
+        width: 11vw;
+        height: 11vw;
+    }
+    .page4 .page4-right .swiper-slide .review .name{
+        font-size: 3.5vw;
+    }
+    .page4 .page4-right .swiper-slide .review p{
+        font-size: 1.8vw;
+    }
+
+    .page5 .page5-top h1{
+        font-size: 6vw;
+    }
+
+    .page5-top .swiperDiv{
+        height: 33vh;
+        margin-top: 8vw;
+    }
+
+    .content h5{
+        font-size: 2.5vw;
+    }
+    .footer h1 span{
+        font-size: 14vw;
+        transform: none !important;
+    }
+
+    .loader h3{
+        font-size: 5.5vw;
+        font-weight: 100;
+      }
+  }
+
+
+
+
